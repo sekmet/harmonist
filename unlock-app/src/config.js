@@ -111,7 +111,6 @@ export default function configure(
     },
     baseCurrencySymbol: 'Eth',
     stripeApiKey: 'pk_test_BHXKmScocCfrQ1oW8HTmnVrB',
-    locksmith: 'http://127.0.0.1:8080', // TODO: not network specific, API calls should be network specific though
     nativeCurrency: {
       name: 'Ether',
       symbol: 'Eth',
@@ -142,7 +141,6 @@ export default function configure(
     },
     requiredConfirmations: 12,
     baseCurrencySymbol: 'Eth',
-    locksmith: 'https://locksmith.unlock-protocol.com', // TODO: not network specific, API calls should be network specific though
     nativeCurrency: {
       name: 'Ether',
       symbol: 'Eth',
@@ -173,7 +171,6 @@ export default function configure(
       address: '0xaFF4481D10270F50f203E0763e2597776068CBc5',
     },
     baseCurrencySymbol: 'Eth',
-    locksmith: 'https://rinkeby.locksmith.unlock-protocol.com', // TODO: not network specific, API calls should be network specific though
     nativeCurrency: {
       name: 'Rinkeby Eth',
       symbol: 'Eth',
@@ -192,7 +189,6 @@ export default function configure(
   //     'https://api.thegraph.com/subgraphs/name/unlock-protocol/unlock-ropsten',
   //   explorer: () => {},
   //   erc20: {},
-  //   locksmith: '', // TODO: not network specific, API calls should be network specific though
   // }
 
   // networks[42] = {
@@ -205,7 +201,6 @@ export default function configure(
   //   subgraphURI: '',
   //   explorer: () => {},
   //   erc20: {},
-  //   locksmith: '', // TODO: not network specific, API calls should be network specific though
   // }
 
   networks[100] = {
@@ -226,7 +221,6 @@ export default function configure(
       },
     },
     erc20: null, // no default ERC20 on xdai for now
-    locksmith: 'https://locksmith.unlock-protocol.com', // need to fix locksmith to support multiple networks...
     baseCurrencySymbol: 'xDai',
     nativeCurrency: {
       name: 'xDAI',

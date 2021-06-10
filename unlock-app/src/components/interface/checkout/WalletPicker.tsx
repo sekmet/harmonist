@@ -52,11 +52,6 @@ export const rpcForWalletConnect = (config: any) => {
 const WalletPicker = ({ onProvider }: WalletPickerProps) => {
   const config = useContext(ConfigContext)
   const injectedProvider = selectProvider(config)
-
-  const walletConnectProvider = new WalletConnectProvider({
-    rpc: rpcForWalletConnect(config),
-  })
-
   const handleInjectProvider = async () => {
     if (injectedProvider.enable) {
       try {
@@ -70,6 +65,10 @@ const WalletPicker = ({ onProvider }: WalletPickerProps) => {
   }
 
   const handleWalletConnectProvider = async () => {
+    const walletConnectProvider = new WalletConnectProvider({
+      rpc: rpcForWalletConnect(config),
+    })
+    walletConnectProvider.enable()
     onProvider(new ethers.providers.Web3Provider(walletConnectProvider))
   }
 

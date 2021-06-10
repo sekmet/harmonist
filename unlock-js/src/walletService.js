@@ -473,11 +473,15 @@ export default class WalletService extends UnlockService {
     { lockAddress, userAddress, metadata, locksmithHost, network },
     callback
   ) {
+<<<<<<< HEAD
     let url = `${locksmithHost}/api/key/${lockAddress}/user/${userAddress}`
     if (network) {
       url = `${url}?chain=${network}`
     }
 
+=======
+    const url = `${locksmithHost}/api/key/${lockAddress}/user/${userAddress}?chain=${network}`
+>>>>>>> ada955fdc (adding support for signatures from smart contract wallets)
     try {
       const currentAddress = await this.getAccount()
       const payload = generateKeyHolderMetadataPayload(currentAddress, metadata)

@@ -12,7 +12,7 @@ export const useFiatKeyPrices = (address: string, network: number) => {
 
   async function getFiatKeyPriceFor(lockAddress: string) {
     const response = await fetch(
-      `${config.networks[network].locksmith}/price/fiat/${lockAddress}`
+      `${config.services.storage.host}/price/fiat/${lockAddress}?chain=${network}`
     )
     const prices: KeyPrice = await response.json()
 

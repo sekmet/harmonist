@@ -28,7 +28,7 @@ export const useGetMetadataFor = (
         {
           lockAddress,
           keyId,
-          locksmithHost: config.networks[network].locksmith,
+          locksmithHost: config.services.storage.host,
           getProtectedData,
         },
         (error, json) => {

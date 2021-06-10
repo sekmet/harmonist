@@ -21,7 +21,8 @@ export const useSetUserMetadata = () => {
           lockAddress,
           userAddress: account,
           metadata,
-          locksmithHost: config.networks[network].locksmith,
+          locksmithHost: config.services.storage.host,
+          network,
         },
         callback
       )

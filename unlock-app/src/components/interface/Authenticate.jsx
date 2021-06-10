@@ -34,6 +34,8 @@ export const AuthenticationContext = createContext()
  * @returns
  */
 const Providers = ({ network, networkConfig, children }) => {
+  const config = useContext(ConfigContext)
+
   const apolloClient = useMemo(
     () =>
       new ApolloClient({
@@ -48,7 +50,7 @@ const Providers = ({ network, networkConfig, children }) => {
   )
 
   const storageService = useMemo(
-    () => new StorageService(networkConfig[network].locksmith),
+    () => new StorageService(config.services.storage.host),
     [networkConfig, network]
   )
 
