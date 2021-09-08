@@ -446,6 +446,8 @@ workflows:
               only:
                 - master
                 - production
+          requires:
+            - integration-tests
       - deploy-locksmith-beanstalk:
           filters:
             branches:
