@@ -3,6 +3,9 @@
 SERVICE=$1
 BRANCH=$2
 
+# REMOVE ME BEFORE MERGING!
+exit 0
+
 # This script is highly specific to circleci and will "succeed" early when the
 # current git changes are not relevant to the folder being tested (and not on master)
 
